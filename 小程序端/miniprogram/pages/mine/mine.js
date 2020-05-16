@@ -100,7 +100,7 @@ Page({
   popConfirm: function () {
     wx.showModal({
       title: '大声爱国小程序',
-      content: 'Hi~，欢迎使用“大声爱国”\n,我们团队希望能给你带来不错的爱国之旅',
+      content: '联系邮箱：3017207087@tju.edu.cn。\n联系电话：17725309261',
       success: function (res) {
         if (res.confirm) {
           console.log('点击确认回调')
@@ -108,7 +108,19 @@ Page({
           console.log('点击取消回调')
         }
       }
-    })
+    });
+    wx.showModal({
+      title: '大声爱国小程序',
+      content: 'Hi~，欢迎使用“大声爱国”,作者：刘汇钰,周玮康,吕曼莹,王思琦,舒雅。',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('点击确认回调')
+        } else {
+          console.log('点击取消回调')
+        }
+      }
+    });
+
   },
 
   login: function () {

@@ -1,0 +1,58 @@
+<view class="contain">
+  <image class="back" src="../../images/aiguo.jpg" />
+  <!-- 用户 openid -->
+  <view class="userinfo" style="opacity:{{0.8}}">
+    <image class="userinfo-avatar" src="{{avatarUrl}}" size="cover"></image>
+    <text class="{{islogin?'userinfo-nickname':'userinfo-nicknametap'}}" bindtap="login">{{userInfo.nickName}}</text>
+  </view>
+
+  <!-- massage -->
+  <view class="message" style="opacity:{{0.8}}">
+    <view class="left" bindtap="openPage" data-url="/pages/rank/rank">
+      <text class="seta">{{myRank.index}}</text>
+      <view class='setting'>
+        <image class="set" src="../../images/2.png" size="cover"></image>
+        <text class="rank">答题排名</text>
+      </view>
+    </view>
+    <view class="right" bindtap="openPage" data-url="/pages/push/push">
+      <text class="seta">{{myPaper}}</text>
+      <view class='setting'>
+        <image class="set" src="../../images/1.png" size="cover"></image>
+        <text class="essay">发表文章</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- mine list -->
+  <view class="person-list" style="opacity:{{0.8}}">
+
+    <!-- data-url="/pages/login/login需要改 -->
+    <view class="list-item" bindtap="openPage" data-url="/pages/questionHistory/questionHistory">
+      <!-- src="../../images/person/personal01.png需要改 -->
+      <image class="item-image" src="https://www.zhouwk.club:10000/static/错题库.png"></image>
+    
+      <text class="item-text">我的错题</text>
+    </view>
+
+    <view class="person-line"></view>
+
+    <!-- data-url="/pages/login/login需要改 -->
+    <view class="list-item" bindtap="openPage" data-url="/pages/mypublish/mypublish">
+      <image class="item-image" src="https://www.zhouwk.club:10000/static/发表.png"></image>
+    
+      <text class="item-text">我的文章</text>
+    </view>
+    <view class="person-line"></view>
+
+    <!-- data-url="/pages/login/login需要改 -->
+    <view class="list-item" bindtap="popConfirm">
+      <image class="item-image" src="https://www.zhouwk.club:10000/static/关于.png"></image>
+    
+      <text class="item-text">关于我们</text>
+    </view>
+
+
+  </view>
+
+</view>

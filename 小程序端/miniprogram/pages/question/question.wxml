@@ -1,0 +1,24 @@
+<view class='content'>
+  <view class='itemtext'>{{list.question}}</view>
+  <button hover-class="btn-hover" class='btn1' style="background-color:{{score1}};width:80vw;" bindtap='ans1' disabled="{{disable}}">
+    <view>{{list.answer1}}</view>
+  </button>
+  <button hover-class="btn-hover" class='btn1' style="background-color:{{score2}};width:80vw;" bindtap='ans2' disabled="{{disable}}">
+    <view>{{list.answer2}}</view>
+  </button>
+  <button hover-class="btn-hover" class='btn1' style="background-color:{{score3}};width:80vw;" bindtap='ans3' disabled="{{disable}}">
+    <view>{{list.answer3}}</view>
+  </button>
+  <button hover-class="btn-hover" class='btn1' style="background-color:{{score4}};width:80vw;" bindtap='ans4' disabled="{{disable}}">
+    <view>{{list.answer4}}</view>
+  </button>
+</view>
+
+<view class="hide{{showView?'show':''}}" style='margin-top: 60rpx;'>
+  <button hover-class="btn-hover" class='btn2' bindtap='next'>
+    <view>下一题</view>
+  </button>
+  <button hover-class="btn-hover" class='btn2' bindtap='back'>
+    <view>结束答题</view>
+  </button>
+</view>

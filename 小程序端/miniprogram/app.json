@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/dati/dati",
+    "pages/mine/mine",
+    "pages/login/login",
+    "pages/question/question",
+    "pages/questionHistory/questionHistory",
+    "pages/rank/rank",
+    "pages/wechat/wechat",
+    "pages/contentDetail/contentDetail",
+    "pages/push/push",
+    "pages/index/index",
+    "pages/search/search",
+    "pages/mypublish/mypublish",
+    "pages/test/test",
+    "pages/fromMinePush/fromMinePush"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "大声爱国",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/index.png",
+        "iconPath": "images/index.png",
+        "pagePath": "pages/dati/dati",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/game.png",
+        "iconPath": "images/game.png",
+        "pagePath": "pages/index/index",
+        "text": "游戏"
+      },
+      {
+        "selectedIconPath": "images/paper.png",
+        "iconPath": "images/paper.png",
+        "pagePath": "pages/wechat/wechat",
+        "text": "文章"
+      },
+      {
+        "selectedIconPath": "images/mine.png",
+        "iconPath": "images/mine.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  }
+}

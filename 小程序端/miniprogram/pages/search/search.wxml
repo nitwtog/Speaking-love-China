@@ -1,0 +1,54 @@
+<!-- wxml -->
+<view class="search-box" style="opacity:{{0.8}}">
+  <view class='icon'>
+    <image class="icons"></image>
+    
+    <input placeholder='输入文章关键字' bindinput='getSearchKey' bindblur='routeToSearchResPage'></input>
+  </view>
+  <text bindtap="btnClick">搜索</text>
+</view>
+
+<view class="tab-content">
+
+<image class="back" src="../../images/aiguo.jpg"/>
+<view class="tab-content-recommend" style="opacity:{{0.8}}" wx:for="{{recList}}" wx:key="{{index}}" wx:item="item">
+            <view class="content-category"  data-name="{{item.name}}"
+                data-image="{{item.image}}"
+                data-agree1="{{item.paperID}}"
+                data-title="{{item.title}}"
+                data-haha="{{item.Iagree}}"
+                data-content="{{item.paper_content}}"
+                data-agree="{{item.agree}}"
+                data-dates="{{item.date}}"
+                bindtap="goContentDetail">
+                <image class="category-avatar" src="{{item.image}}"/>
+                <text class="category-title">{{item.name}}</text>
+            </view>
+            <view class="recommend-title"  data-name="{{item.name}}"
+                data-image="{{item.image}}"
+                data-agree1="{{item.paperID}}"
+                data-title="{{item.title}}"
+                data-haha="{{item.Iagree}}"
+                data-content="{{item.paper_content}}"
+                data-agree="{{item.agree}}"
+                data-dates="{{item.date}}"
+                bindtap="goContentDetail">{{item.title}}</view>
+            <view class="recommend-content"
+                data-name="{{item.name}}"
+                data-image="{{item.image}}"
+                data-agree1="{{item.paperID}}"
+                data-title="{{item.title}}"
+                data-haha="{{item.Iagree}}"
+                data-content="{{item.paper_content}}"
+                data-agree="{{item.agree}}"
+                data-dates="{{item.date}}"
+                bindtap="goContentDetail">{{item.paper_content}}</view>
+            <view class="recommend-footer">
+                <view class="recommend-footer-text">
+                    <text>{{item.agree}}人点赞 </text>
+                    <text wx:if="{{item.from}}">· {{footerTip[item.from]}}</text>
+                </view>
+            </view>
+        </view>
+       
+  </view>

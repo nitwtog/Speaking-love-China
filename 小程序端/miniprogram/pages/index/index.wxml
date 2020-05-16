@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<view class="container">
+  <view style="line-height:22px;color:#000;font-size:14px;font-weight:bold;padding: 50rpx;text-indent: 0rpx;">
+  2020年伊始，新型冠状病毒悄然在人群中传播。当你点击一块方格时，其中可能是潜藏的病毒也可能是一个重要的提示信息。长按后可以派出医生消灭该区域病毒。请您帮助我们完成对于病毒的消灭工作。
+  </view>
+  <view style="line-height:22px;font-color:#000;font-size:14px;font-weight:bold;padding: 50rpx;text-indent: 0rpx;">
+  说明：点击探测病毒，长按可以标记病毒哦~
+  </view>
+
+  <view class="game-box">
+
+    <ul wx:for="{{mineMap}}" wx:for-index="i" wx:for-item="row" wx:key="row" class="row">
+        <li wx:for="{{row}}" wx:for-index="j" wx:for-item="col" wx:key="col" data-x="{{i}}" data-y="{{j}}" data-value="{{col.value}}" bind:tap="demining" bind:longpress="pullUpFlag" class="col  {{col.open == true ? 'open' : ''}} {{col.flag == true ? 'flag' : ''}}">
+            <span wx:if="{{col.flag == true}}">
+            <image class="backO" src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=852002403,2954080942&fm=26&gp=0.jpg"/>
+            </span>
+            <span wx:elif="{{col.value == 9}}" style="color:red;">
+            <image class="back" src="http://img5.imgtn.bdimg.com/it/u=273780745,1118957002&fm=26&gp=0.jpg"/>
+            </span>
+            <span wx:elif="{{col.value == 0}}">
+           
+             </span>
+            <span wx:else>{{col.value}}</span>
+        </li>
+    </ul>
+    
+  </view>
+
+  <view class="info" style="font-color:#000;font-size:16px;font-weight:bold;">
+      <p class="">
+          剩余雷数 :
+          <span class="remain">{{ remainMineNum }}</span>
+      </p>
+      <p>
+          时间 :
+          <span class="time">{{ timesGo }}</span> S
+      </p>
+  </view>
+
+  <view class="sub">
+      <button bind:tap="restart" type="button" name="button" class="restart">重新开始</button>
+  </view>
+
+
+</view>

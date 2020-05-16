@@ -1,0 +1,20 @@
+<view wx:if="{{canIUse}}">
+  <view class='header'>
+    <image src='../../images/logo.png'></image>
+  </view>
+
+  <view class='content'>
+    <view>申请获取以下权限</view>
+    <text>获得你的公开信息(昵称，头像等)</text>
+  </view>
+
+  <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindtap='onGetOpenid' bindgetuserinfo="bindGetUserInfo">
+    授权登录
+    <!--由于微信官方修改了 getUserInfo 接口，所以现在无法实现一进入微信小程序就弹出授权窗口，只能通过 button 去触发,并且button里必须要加open-type="getUserInfo"才能弹出授权窗口-->
+  </button>
+  <button class='bottom2' open-type="getUserInfo" lang="zh_CN" bindtap='refuse'>
+    下次再说
+  </button>
+</view>
+
+<view wx:else>请升级微信版本</view>

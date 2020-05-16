@@ -1,0 +1,44 @@
+.container{
+  background:url("http://129.211.44.111:10000/static/aiguo.jpg");
+  height: 100%;
+}
+.btn1 {
+  width: 80%;
+  margin-top: 20rpx;
+  background-color: burlywood;
+  color: white;
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnImg {
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.btn1::after {
+  border-radius: 98rpx;
+  border: 0;
+}
+
+.imagesize {
+  display: flex;
+  justify-content: center;
+  margin-top: 60rpx;
+  margin-bottom: 60rpx;
+}
+
+.imagesize image {
+  width: 400rpx;
+  height: 400rpx;
+}
+
+.btn-hover {
+  position: relative;
+  top: 3rpx;
+  box-shadow: 0px 0px 8px #999 inset;
+}

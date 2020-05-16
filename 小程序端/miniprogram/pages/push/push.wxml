@@ -1,0 +1,33 @@
+ <!-- <view style="background:url('../../images/aiguo.jpg');position:fixed;top:0;left:0;width:100%;height:100%;background-size:cover;z-index:-1;" > -->
+ <image class="back" src="../../images/aiguo.jpg"/>
+ <view class="question-mask" style="opacity:{{0.8}}">
+        
+        <view class="question-input-wrapper" >
+            
+            <input class="question-mask-input" placeholder-style="color: #cdcdcd" placeholder="标题" bindinput="titleInput" type="text" />
+            <textarea class="question-mask-text" placeholder-style="color: #cdcdcd" placeholder="内容" bindinput="contentInput" type="textarea" />
+            <button class="pushed" bindtap="loginBtnClick">发表</button>
+        </view>
+    </view>
+  <!-- </view> -->
+    <!-- 提问 -->
+<!-- <view class="itemView">用户名：
+    <input class="input" name="userName" placeholder="请输入用户名" 
+    bindinput="userNameInput"/>
+  </view>
+<view class="itemView">密    码：
+    <input class="input" password placeholder="请输入密码"
+     bindinput="passWdInput" />
+  </view>
+<view class="viewName" style="background-color:#fbf9fe">
+  <button class="loginBtn" bindtap="loginBtnClick">登录</button>
+  <button class="resetBtn" bindtap="resetBtnClick">清除</button>
+</view>
+<view>{{infoMess}}</view>
+<view>{{userName}}</view>
+<view>{{passWd}}</view>
+<view class="viewName" style="margin-top: 60px;">
+  <navigator url="Component/TextInput/TextInput">
+    <text class="view-Name">各类型输入框展示</text>
+  </navigator>
+</view> -->

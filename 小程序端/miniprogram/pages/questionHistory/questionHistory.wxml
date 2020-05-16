@@ -1,0 +1,15 @@
+<view style="background:url('https://www.zhouwk.club:10000/static/aiguo.jpg');position:fixed;top:0;left:0;width:100%;height:100%;background-size:cover;z-index:-1;"></view>
+<view class="page centerPage-wrap" id="userCenterPage" data-router="userCenterPage">
+  <block wx:for="{{list}}" wx:key="index">
+    <view class="centerPage-user-info" style="margin:40rpx;background-color:rgba(255,255,255,0.8);">
+      <view class="js-change-cover" style="line-height:22px;font-size:14px;font-weight:bold;padding: 20rpx;text-indent: 0rpx;">{{index+1}}.{{item.question}}</view>
+      <view class="js-change-cover" style="font-size:12px;">A. {{item.answerA}}</view>
+      <view class="js-change-cover" style="font-size:12px;">B. {{item.answerB}}</view>
+      <view class="js-change-cover" style="font-size:12px;">C. {{item.answerC}}</view>
+      <view class="js-change-cover" style="font-size:12px;">D. {{item.answerD}}</view>
+      <view class="js-change-cover">
+        <button bindtap="checkAnswer" data-index="{{index}}">{{item.ckeck}}</button>
+      </view>
+    </view>
+  </block>
+</view>

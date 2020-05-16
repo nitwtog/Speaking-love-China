@@ -1,0 +1,22 @@
+<view class="page centerPage-wrap" id="userCenterPage" data-router="userCenterPage">
+  <view class="centerPage-user-info">
+    <view wx:for="{{list}}" wx:key="index" class="centerPage-info-item">
+      <image class="item-icon" mode="widthFix" src="{{icon[index].rank}}"></image>
+      <image class="item-icon2" mode="widthFix" src="{{item.image}}"></image>
+      <i> {{item.name}}</i>
+      <span class="item-data">
+        <i class="rankpace"> {{item.score}}</i>
+      </span>
+    </view>
+  </view>
+  <view class="centerPage-user-info">
+    <view class="centerPage-info-item">
+      <label class="paiming">{{myRank.index}}</label>
+      <image class="item-icon2" mode="widthFix" src="{{myRank.image}}"></image>
+      <i> {{myRank.name}}</i>
+      <span class="item-data">
+        <i class="rankpace"> {{myRank.score}}</i>
+      </span>
+    </view>
+  </view>
+</view>

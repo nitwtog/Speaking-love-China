@@ -1,0 +1,30 @@
+ <!-- <view style="background:url('../../images/aiguo.jpg');top:0;left:0;width:100%;height:100%;background-size:cover;" > -->
+<!-- <view style="background:url('../../images/aiguo.jpg');position:fixed;top:0;left:0;width:100%;height:100%;background-size:cover;z-index:-1;" > -->
+<!-- <scroll-view scroll-y="true"> -->
+<!-- <view class="weather-wrapper"> -->
+<image class="back" src="../../images/aiguo.jpg"/>
+<scroll-view class="content-detail" scroll-y style="opacity:{{0.8}}">
+    <view class="content-detail-title">{{questionTitle}}</view>
+    <view class="content-category">
+                <image class="category-avatar" src="{{image}}"/>
+                <text class="category-title">{{name}}</text>
+            </view>
+    <view class="content-detail-answer" >
+        {{contentDetail}}
+        <view class="content-detail-bottom">
+            <view>发表时间：{{dates}}</view>
+           <!--  -->
+        </view>
+    
+</view>
+</scroll-view>
+<!-- </scroll-view> -->
+<!-- </view> -->
+    <view class="likes" style="opacity:{{0.8}}">
+    <image class="dianzantu" src="{{favor_img}}" bindtap="praiseThis"  wx:if="{{show == true}}" mode="widthFix" />
+    <image class="dianzantu" src="{{favor_img2}}" bindtap="praiseThis"  wx:else mode="widthFix" /><view class='title'>{{like}}人点赞</view>
+    <!-- <view class="praise {{show? 'changed': ''}}" hover-class="hover_praise" bindtap="praiseThis">{{like}}{{show}}</view> -->
+    </view>
+
+
+   <!-- </view> -->

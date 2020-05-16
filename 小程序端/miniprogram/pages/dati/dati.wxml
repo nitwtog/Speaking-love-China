@@ -1,0 +1,13 @@
+<view style="background:url('https://www.zhouwk.club:10000/static/aiguo.jpg');position:fixed;top:0;left:0;width:100%;height:100%;background-size:cover;z-index:-1;"></view>
+<view class='imagesize'>
+  <image class="in-image" src='../../images/1231.png' style="border-radius:20%"></image>
+</view>
+<button hover-class="btn-hover" class='btn1' bindtap='rank'>
+  <view>排行榜</view>
+</button>
+<button hover-class="btn-hover" class='btn1' bindtap='beginAnswer'>
+  <view>开始答题</view>
+</button>
+<button hover-class="btn-hover" class='btn1' bindtap='history'>
+  <view>错题记录</view>
+</button>
